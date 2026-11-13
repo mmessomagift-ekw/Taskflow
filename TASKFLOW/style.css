@@ -1,0 +1,321 @@
+
+/* RÉINITIALISATION */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f6fc;
+    color: #25243a;
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+button, input {
+    font-family: inherit;
+}
+
+/* CONTENEUR PRINCIPAL */
+
+.conteneur {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* EN-TÊTE */
+
+.entete {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 65px;
+}
+
+.logo {
+    font-size: 22px;
+    color: #6658e8;
+}
+
+.date {
+    color: #888;
+    font-size: 13px;
+}
+
+/* SECTION DE BIENVENUE */
+
+.bienvenue {
+    margin-bottom: 35px;
+}
+
+.sous-titre {
+    color: #6658e8;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+h1 span {
+    color: #6658e8;
+}
+
+.description {
+    color: #888;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* CONTENEUR DES TÂCHES */
+
+.conteneur-taches {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.05);
+}
+
+.entete-taches {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.entete-taches h2 {
+    font-size: 23px;
+}
+
+.entete-taches h2 span {
+    background: #eeecff;
+    color: #6658e8;
+    font-size: 13px;
+    padding: 5px 9px;
+    border-radius: 7px;
+}
+
+/* BARRE DE PROGRESSION */
+
+.progression {
+    width: 130px;
+}
+
+.barre-progression {
+    height: 5px;
+    background: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 7px;
+}
+
+#remplissageProgression {
+    width: 0%;
+    height: 100%;
+    background: #6658e8;
+    transition: width 0.3s;
+}
+
+#texteProgression {
+    font-size: 10px;
+    color: #888;
+    text-align: right;
+}
+
+/* FORMULAIRE */
+
+#formulaireTache {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#champTache {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #e5e5ed;
+    border-radius: 9px;
+    outline: none;
+    font-size: 13px;
+}
+
+#champTache:focus {
+    border-color: #6658e8;
+}
+
+#formulaireTache button {
+    background: #6658e8;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+#formulaireTache button:hover {
+    background: #5144cf;
+}
+
+/* FILTRES */
+
+.filtres {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.filtres button {
+    border: none;
+    background: transparent;
+    color: #888;
+    padding: 9px 12px;
+    cursor: pointer;
+    border-radius: 7px;
+    font-size: 12px;
+}
+
+.filtres button:hover {
+    color: #6658e8;
+}
+
+.filtres button.actif {
+    background: #eeecff;
+    color: #6658e8;
+    font-weight: bold;
+}
+
+#supprimerTerminees {
+    margin-left: auto;
+}
+
+/* LISTE DES TÂCHES */
+
+#listeTaches {
+    list-style: none;
+}
+
+.element-tache {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.element-tache input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #6658e8;
+    cursor: pointer;
+}
+
+.texte-tache {
+    flex: 1;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.element-tache.terminee .texte-tache {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.bouton-supprimer {
+    border: none;
+    background: #fff0f0;
+    color: #e74c3c;
+    padding: 7px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.bouton-supprimer:hover {
+    background: #e74c3c;
+    color: white;
+}
+
+/* MESSAGE VIDE */
+
+#messageVide {
+    text-align: center;
+    color: #999;
+    font-size: 13px;
+    padding: 35px 10px;
+}
+
+/* PIED DES TÂCHES */
+
+.pied-taches {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 18px;
+    margin-top: 15px;
+    color: #999;
+    font-size: 11px;
+}
+
+.sauvegarde {
+    color: #2da77a;
+}
+
+/* PIED DE PAGE */
+
+.pied-page {
+    text-align: center;
+    color: #aaa;
+    font-size: 11px;
+    margin-top: 25px;
+}
+
+/* ADAPTATION AUX TÉLÉPHONES */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .entete {
+        margin-bottom: 45px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .conteneur-taches {
+        padding: 20px 15px;
+    }
+
+    .entete-taches {
+        gap: 10px;
+    }
+
+    .progression {
+        width: 95px;
+    }
+
+    #formulaireTache {
+        flex-direction: column;
+    }
+
+    #formulaireTache button {
+        width: 100%;
+    }
+
+    .pied-taches {
+        gap: 10px;
+    }
+}

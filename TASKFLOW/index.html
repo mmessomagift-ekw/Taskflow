@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TaskFlow, votre application simple pour organiser vos tâches quotidiennes.">
+    <title>TaskFlow - Gestionnaire de tâches</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <div class="conteneur">
+
+        <!-- En-tête -->
+        <header class="entete">
+            <h2 class="logo">✓ TaskFlow</h2>
+            <p class="date" id="date"></p>
+        </header>
+
+        <!-- Présentation -->
+        <section class="bienvenue">
+            <p class="sous-titre">VOTRE ESPACE DE TRAVAIL</p>
+
+            <h1>
+                Avancez chaque jour.<br>
+                <span>Une tâche à la fois.</span>
+            </h1>
+
+            <p class="description">
+                Organisez votre journée, gérez vos priorités
+                et restez productif.
+            </p>
+        </section>
+
+        <!-- Gestion des tâches -->
+        <section class="conteneur-taches">
+
+            <div class="entete-taches">
+                <div>
+                    <p class="sous-titre">VOTRE JOURNÉE</p>
+                    <h2>Mes tâches <span id="totalTaches">0</span></h2>
+                </div>
+
+                <div class="progression">
+                    <div class="barre-progression">
+                        <div id="remplissageProgression"></div>
+                    </div>
+                    <p id="texteProgression">0 % terminé</p>
+                </div>
+            </div>
+
+            <!-- Formulaire d'ajout -->
+            <form id="formulaireTache">
+
+                <input
+                    type="text"
+                    id="champTache"
+                    placeholder="Quelle tâche souhaitez-vous accomplir ?"
+                    maxlength="120"
+                    required
+                >
+
+                <button type="submit">
+                    + Ajouter
+                </button>
+
+            </form>
+
+            <!-- Filtres -->
+            <div class="filtres">
+
+                <button class="filtre actif" data-filtre="toutes">
+                    Toutes
+                </button>
+
+                <button class="filtre" data-filtre="actives">
+                    À faire
+                </button>
+
+                <button class="filtre" data-filtre="terminees">
+                    Terminées
+                </button>
+
+                <button id="supprimerTerminees">
+                    Effacer les terminées
+                </button>
+
+            </div>
+
+            <!-- Liste des tâches -->
+            <ul id="listeTaches"></ul>
+
+            <!-- Message si aucune tâche -->
+            <p id="messageVide">
+                ✨ Aucune tâche pour le moment.
+                Ajoutez votre première tâche !
+            </p>
+
+            <!-- Pied du conteneur -->
+            <div class="pied-taches">
+
+                <span id="tachesRestantes">
+                    0 tâche restante
+                </span>
+
+                <span class="sauvegarde">
+                    ● Sauvegarde automatique
+                </span>
+
+            </div>
+
+        </section>
+
+        <!-- Pied de page -->
+        <footer class="pied-page">
+            TaskFlow © <span id="annee"></span>
+            - Organisez votre quotidien.
+        </footer>
+
+    </div>
+
+</body>
+</html>
